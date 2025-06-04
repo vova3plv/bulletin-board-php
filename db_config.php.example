@@ -1,0 +1,20 @@
+// db_config.php.example
+<?php
+
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'bulletin_board_db');
+define('DB_USER', 'your_db_user'); // Замініть на ваш логін
+define('DB_PASS', 'your_db_password'); // ЗАМІНІТЬ НА ВАШ ПАРОЛЬ
+define('DB_CHARSET', 'utf8mb4');
+
+define('RECAPTCHA_SITE_KEY', 'YOUR_RECAPTCHA_SITE_KEY_HERE');
+define('RECAPTCHA_SECRET_KEY', 'YOUR_RECAPTCHA_SECRET_KEY_HERE');
+
+$pdo_options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
+
+$dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET;
+?>
