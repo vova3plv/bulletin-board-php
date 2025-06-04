@@ -45,11 +45,11 @@
 
 Для коректної роботи веб-ресурсу необхідно створити базу даних та відповідні таблиці. Виконайте наступні SQL-запити у вашому інструменті управління базами даних (наприклад, phpMyAdmin, DataGrip або MySQL Workbench):
 
-
+```sql
 -- Створення бази даних
 CREATE DATABASE IF NOT EXISTS bulletin_board_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE bulletin_board_db;
-```sql
+
 -- Таблиця users (Користувачі)
 CREATE TABLE IF NOT EXISTS `users` (
     `id` INT AUTO_INCREMENT PRIMARY KEY,
